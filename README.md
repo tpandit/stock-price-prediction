@@ -30,6 +30,12 @@ Make sure you have the following Python packages installed:
 You can install these packages using pip:
 
 ```bash
+pip install -r requirements.txt
+```
+
+Or install individually:
+
+```bash
 pip install pmdarima statsmodels prophet pandas-profiling seaborn numpy matplotlib sklearn
 ```
 
@@ -38,7 +44,7 @@ pip install pmdarima statsmodels prophet pandas-profiling seaborn numpy matplotl
 1. **Import Dataset**
 
    ```python
-   data = pd.read_csv(r'C:\Users\admin\Downloads\NSE-TATAGLOBAL.csv')
+   data = pd.read_csv('NSE-TATAGLOBAL.csv')
    ```
 
 2. **Convert Date Column and Reverse Data**
@@ -112,6 +118,8 @@ def sarima_prediction(data):
    arima_prediction(data)
    sarima_prediction(data)
    ```
+
+   Note: Make sure the data has 'Date' as the index and 'Open' column for stock prices.
 
 ## License
 
